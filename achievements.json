@@ -1,0 +1,209 @@
+[
+  {
+    "date": "2025-11-17",
+    "title": "Kissing-number bounds",
+    "ai": "Reinforcement learning",
+    "tier": "notable",
+    "summary": "PackingStar recast sphere packing as a cooperative matrix-completion game and found geometric configurations that improved 15 longstanding lower bounds for kissing numbers and related spherical codes.",
+    "status": "Research paper",
+    "source": "https://arxiv.org/abs/2511.13391"
+  },
+  {
+    "date": "2026-01-29",
+    "title": "Erdős problem survey",
+    "ai": "Gemini",
+    "tier": "notable",
+    "summary": "Gemini screened 700 conjectures marked open in the Erdős Problems database. Human review identified five seemingly new solutions and eight problems whose earlier solutions were hidden in the literature.",
+    "status": "Research paper",
+    "source": "https://arxiv.org/abs/2601.22401"
+  },
+  {
+    "date": "2026-05-20",
+    "title": "Unit-distance conjecture",
+    "ai": "OpenAI internal model",
+    "tier": "major",
+    "summary": "The model constructed an infinite family of planar point sets with polynomially more unit-distance pairs than the square-grid construction, disproving the prevailing asymptotic conjecture. External mathematicians checked the proof.",
+    "status": "Announced disproof",
+    "source": "https://openai.com/index/model-disproves-discrete-geometry-conjecture/"
+  },
+  {
+    "date": "2026-05-21",
+    "title": "Erdős & OEIS proofs",
+    "ai": "DeepMind",
+    "tier": "notable",
+    "summary": "A Lean-verified proof-search agent resolved 9 of 353 open Erdős problems and proved 44 of 492 conjectures drawn from the OEIS.",
+    "status": "Research paper",
+    "source": "https://arxiv.org/abs/2605.22763"
+  },
+  {
+    "date": "2026-07-16",
+    "title": "Cycle double cover",
+    "ai": "GPT-5.6 Sol Ultra",
+    "tier": "landmark",
+    "summary": "The reported proof shows that every bridgeless graph has a collection of cycles covering each edge exactly twice. Independent expositions and a Lean formalization were subsequently released.",
+    "status": "Independent expositions published",
+    "source": "https://arxiv.org/abs/2607.15399"
+  },
+  {
+    "date": "2026-07-31",
+    "title": "Jacobian conjecture",
+    "ai": "Claude Fable 5 + Alpöge",
+    "tier": "landmark",
+    "summary": "Alpöge and Claude gave a polynomial map in three variables with constant nonzero Jacobian determinant that is not invertible. The construction refutes the Jacobian conjecture in every dimension greater than two.",
+    "status": "Reported disproof",
+    "source": "https://arxiv.org/abs/2608.00222"
+  },
+  {
+    "date": "2026-07-22",
+    "title": "Dinitz–Garg–Goemans",
+    "ai": "GPT-5.6 Pro + Rybin",
+    "tier": "major",
+    "summary": "The model found a network in which a divisible multicommodity flow costs 58, while every unsplittable flow respecting the stated capacity margin costs at least 60. This counterexample disproves the conjectured cost-preserving rounding guarantee.",
+    "status": "Reported disproof",
+    "source": "https://x.com/DmitryRybin1/status/2079904005652893709"
+  },
+  {
+    "date": "2026-07-27",
+    "title": "Crouzeix’s conjecture",
+    "ai": "GPT-5.6 Sol + Jin",
+    "tier": "major",
+    "summary": "The manuscript proves the sharp inequality ‖p(A)‖ ≤ 2 max|p(z)| over the numerical range of every complex matrix A. This establishes that the numerical range is always a 2-spectral set.",
+    "status": "Expert-reviewed; independent proof reported",
+    "source": "https://www.preprints.org/manuscript/202607.1919/v1"
+  },
+  {
+    "date": "2026-08-01",
+    "title": "Ten mathematical advances",
+    "ai": "OpenAI Astra",
+    "tier": "major",
+    "summary": "OpenAI reported ten model-assisted results across mathematics and theoretical computer science, including constructions related to non-sofic groups. The results were released together as a single, not-yet-peer-reviewed batch.",
+    "status": "Not peer-reviewed",
+    "source": "https://openai.com/index/ten-advances-in-mathematics/"
+  },
+  {
+    "date": "2026-08-05",
+    "title": "Sendov’s conjecture",
+    "ai": "AI + Mazur; Tao",
+    "tier": "major",
+    "summary": "The proof establishes that every zero of a monic polynomial in the unit disk lies within distance one of a critical point. A Lean formalization was produced and Tao published an examination of the argument.",
+    "status": "Examined by Tao",
+    "source": "https://www.proofatlas.ai/papers/sendov-conjecture/SENDOV_CONJECTURE_PROOF_AUGUST_5_2026.pdf"
+  },
+  {
+    "date": "2026-08-10",
+    "title": "Zeta zeros on the critical line",
+    "ai": "Claude",
+    "tier": "major",
+    "summary": "Claude-assisted work reportedly raised the proven lower proportion of nontrivial Riemann zeta zeros on the critical line to 67.25%. This strengthens a quantitative approximation to the Riemann hypothesis without proving it.",
+    "status": "Announced result",
+    "source": "https://www.anthropic.com/research/riemann-zeta"
+  },
+  {
+    "date": "2026-08-12",
+    "title": "Hadamard matrix constructions",
+    "ai": "Claude + collaborators",
+    "tier": "notable",
+    "summary": "The team supplied explicit ±1 Hadamard matrices for the twelve previously unresolved admissible orders below 2000, including order 668. Exact multiplication verifies each matrix, while the general Hadamard conjecture remains open.",
+    "status": "Reported constructions; general conjecture open",
+    "source": "https://vibemathed.com/problem/hadamard-matrix-of-order-668"
+  },
+  {
+    "date": "2026-08-13",
+    "title": "OEIS conjecture campaign",
+    "ai": "Epoch AI · various LLMs",
+    "tier": "notable",
+    "summary": "A multi-model campaign tested open conjectures drawn from the OEIS and reported 147 proofs or counterexamples. The study measures scalable conjecture-solving and partly overlaps the earlier DeepMind corpus.",
+    "status": "Research paper",
+    "source": "https://arxiv.org/html/2608.11941"
+  },
+  {
+    "date": "2026-08-23",
+    "title": "Record elliptic-curve ranks",
+    "ai": "Claude + Alpöge / Howell",
+    "tier": "major",
+    "summary": "Two explicit elliptic curves over the rationals were accompanied by independent rational points proving ranks of at least 30 and 31. These surpassed the previous reported rank record of 29.",
+    "status": "Reported records",
+    "source": "https://elliptic-rank.icarm.cloud/curve/302"
+  },
+  {
+    "date": "2026-08-24",
+    "title": "Hopf problem on S⁶",
+    "ai": "Claude + Alpöge",
+    "tier": "landmark",
+    "summary": "The manuscript constructs a compact complex threefold fibred by two-dimensional tori and argues that its underlying smooth manifold is S⁶. If correct, this gives the six-sphere an integrable complex structure and resolves Hopf’s 1948 problem.",
+    "status": "Not independently verified",
+    "source": "https://alpo.ge/s6.pdf"
+  },
+  {
+    "date": "2026-08-25",
+    "title": "Erdős–Rankin improvement",
+    "ai": "GPT-5.6 Sol",
+    "tier": "major",
+    "summary": "The model found and formalized a stronger tilted residue-class construction for unusually long intervals containing no primes. The result improves a key ingredient in the Erdős–Rankin method for large prime gaps.",
+    "status": "Reported Lean formalization",
+    "source": "https://vibemathed.com/problem/tilted-residue-class-construction-for-long-prime-free-intervals"
+  },
+  {
+    "date": "2026-08-30",
+    "title": "Short prime gaps",
+    "ai": "OpenAI",
+    "tier": "major",
+    "summary": "The manuscript claims infinitely many pairs of primes differ by at most 186, lowering the previous unconditional bound. The result narrows the gap toward the twin-prime conjecture but does not prove a gap of two.",
+    "status": "Not independently verified",
+    "source": "https://cdn.openai.com/pdf/51126fac-1b68-4128-9666-c908bcc16033/short_gaps.pdf"
+  },
+  {
+    "date": "2026-09-03",
+    "title": "Dying percolation conjecture",
+    "ai": "Claude",
+    "tier": "major",
+    "summary": "The project reports a proof of the dying-percolation conjecture together with a Lean formalization, turning the probabilistic statement into a machine-checkable theorem.",
+    "status": "Reported Lean formalization",
+    "source": "https://github.com/anthropics/formal-math/blob/795efb86f191735c5481675763537cfb4ff37e55/percolation/README.md"
+  },
+  {
+    "date": "2026-09-04",
+    "title": "Kozma–Nitzan follow-up",
+    "ai": "ChatGPT + Claude + Bou-Rabee",
+    "tier": "major",
+    "summary": "A follow-up project claims proofs of the remaining Kozma–Nitzan percolation conjectures and supplies Lean formalizations. It extends the preceding dying-percolation result rather than duplicating it.",
+    "status": "Claimed proof; Lean formalization",
+    "source": "https://nitromannitol.github.io/kn1-verification-b80e9/"
+  },
+  {
+    "date": "2026-09-04",
+    "title": "Fermat’s Last Theorem formalization",
+    "ai": "Claude + collaborators",
+    "tier": "major",
+    "summary": "Claude and collaborators translated the classical proof of Fermat’s Last Theorem into Lean, producing a computer-checkable verification of the theorem. The mathematical result was already known; the achievement is the formalization.",
+    "status": "Reported Lean formalization",
+    "source": "https://www.anthropic.com/research/formalizing-fermats-last-theorem"
+  },
+  {
+    "date": "2026-09-04",
+    "title": "Köthe conjecture",
+    "ai": "GPT-6 Astra + Epoch AI",
+    "tier": "landmark",
+    "summary": "The project reports an explicit counterexample to Köthe’s conjecture, which asks whether the sum of two nil left ideals must be nil. A Lean check accompanies the construction.",
+    "status": "Reported Lean check",
+    "source": "https://github.com/tadamcz/koethe"
+  },
+  {
+    "date": "2026-09-05",
+    "title": "Navier–Stokes regularity",
+    "ai": "OpenAI internal model",
+    "tier": "landmark",
+    "summary": "OpenAI reported a proof addressing whether smooth three-dimensional Navier–Stokes flows can develop singularities in finite time. The claimed Millennium Prize solution remains unverified and its priority is disputed.",
+    "status": "Unverified; priority disputed",
+    "source": "https://openai.com/index/navier-stokes-solution/"
+  },
+  {
+    "date": "2026-09-05",
+    "title": "Ibragimov–Iosifescu conjecture",
+    "ai": "GPT-6 Astra + Epoch AI",
+    "tier": "major",
+    "summary": "The project claims a counterexample to the Ibragimov–Iosifescu central limit conjecture for φ-mixing sequences, showing the stated mixing assumptions do not guarantee the proposed limit behavior.",
+    "status": "Claimed disproof",
+    "source": "https://github.com/tadamcz/phi-mixing-clt/blob/main/info.json"
+  }
+]

@@ -1,0 +1,328 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="An interactive cumulative timeline of mathematical discoveries by AI, based on Wikipedia."><title>A timeline of mathematical discoveries by AI</title><style>
+:root{--ink:#142a3b;--muted:#617486;--line:#dfe7ed;--blue:#2362c3;--bg:#f3f7fa}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,sans-serif}main{max-width:1440px;margin:0 auto;padding:40px 48px 28px}.eyebrow{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--blue);font-weight:700}header{display:flex;justify-content:space-between;align-items:end;gap:24px;margin-bottom:28px}h1{font-size:clamp(28px,3vw,42px);letter-spacing:0;margin:10px 0 8px;font-weight:650}.snapshot{text-align:right;font-size:13px;color:var(--muted);line-height:1.7;white-space:nowrap}.snapshot strong{display:block;color:var(--ink);font-size:22px;font-weight:550}.chart-card{background:white;border:1px solid var(--line);border-radius:18px;box-shadow:0 12px 42px #17395406;overflow:hidden}.chart-top{display:flex;justify-content:flex-end;gap:18px;align-items:center;padding:22px 28px 0}.legend{display:flex;gap:23px;font-size:14px;color:var(--muted);flex-wrap:wrap}.legend span{display:flex;align-items:center;gap:8px}.symbol{width:12px;height:12px;border-radius:50%;display:inline-block;border:2px solid #708ca0}.solid{background:var(--blue);border-color:var(--blue)}.plot-scroll{overflow-x:auto;padding:0 12px}#chart{display:block;width:100%;min-width:940px;height:auto;overflow:visible}.notes{display:flex;justify-content:space-between;align-items:flex-start;gap:40px;margin:23px 4px 0;font-size:14px;line-height:1.65;color:var(--muted)}.notes p{max-width:760px;margin:0}.notes .source{flex:none;white-space:nowrap;font-size:12px}.notes strong{color:var(--ink);font-weight:600}a{color:var(--blue);text-underline-offset:3px}.point{cursor:pointer;outline:none}.point .halo{fill:transparent;stroke:transparent;stroke-width:2}.point:hover .halo,.point:focus .halo,.point.selected .halo{fill:#2362c312;stroke:#2362c340}.tip{position:fixed;width:340px;background:#152c3f;color:white;padding:19px 20px;border-radius:12px;box-shadow:0 12px 36px #12263830;z-index:10;display:none}.tip .meta{font-size:12px;color:#b6cce0}.tip h3{font-size:17px;line-height:1.35;margin:10px 0 8px}.tip p{font-size:14px;color:#dfebf4;margin:0;line-height:1.5}.tip .status{margin-top:12px;border-top:1px solid #ffffff24;padding-top:10px;font-size:12px;color:#b6cce0}.tip a{display:inline-block;margin-top:10px;color:#b9d8ff;font-size:12px}@media(max-width:700px){main{padding:24px 16px}header{align-items:start;flex-direction:column;margin-bottom:22px}.snapshot{text-align:left}.snapshot strong{display:inline;font-size:15px;margin-right:10px}.chart-top{padding:19px 18px 5px;align-items:flex-start}.legend{gap:15px;font-size:13px}.notes{flex-direction:column;gap:12px}.notes .source{white-space:normal}.tip{width:min(340px,calc(100vw - 24px))}}@media(prefers-reduced-motion:reduce){*{transition:none!important}}
+</style></head><body><main><header><div><div class="eyebrow">AI × Mathematics</div><h1>A timeline of mathematical discoveries by AI</h1></div><div class="snapshot"><strong id="count">Loading…</strong>Wikipedia snapshot · 13 September 2026</div></header><section class="chart-card" aria-label="Interactive cumulative discovery timeline"><div class="chart-top"><div class="legend" aria-label="Importance tiers"><span><i class="symbol"></i>Notable advance</span><span><i class="symbol solid"></i>Major advance</span><span><svg viewBox="0 0 24 24" aria-hidden="true" style="display:block;width:22px;min-width:22px;height:22px;overflow:visible"><path id="legend-star"/></svg>Landmark</span></div></div><div class="plot-scroll"><svg id="chart" viewBox="0 0 1240 650" role="group" aria-label="Cumulative timeline of notable mathematical achievements."></svg></div></section><div class="notes"><p><strong>How importance is assigned.</strong> Notable: specialized improvements or batch progress. Major: substantial conjecture, bound, or formalization advances. Landmark: foundational, longstanding problems with broad significance if confirmed. These tiers are editorial, independent of verification, and are not Wikipedia ratings.</p><span class="source">Source: <a href="https://en.wikipedia.org/w/index.php?title=List_of_mathematical_discoveries_by_artificial_intelligence&amp;oldid=1374692473" target="_blank" rel="noopener">Wikipedia · archived revision</a></span></div></main><div id="tip" class="tip" role="tooltip"></div><script>
+const chart = document.getElementById('chart');
+const count = document.getElementById('count');
+const tip = document.getElementById('tip');
+const scrollArea = document.querySelector('.plot-scroll');
+const NS = 'http://www.w3.org/2000/svg';
+const W = 1240;
+const H = 650;
+const L = 85;
+const R = 130;
+const T = 65;
+const B = 80;
+const tierNames = {
+  notable: 'Notable advance',
+  major: 'Major advance',
+  landmark: 'Landmark'
+};
+const starStyle = {
+  fill: '#ffd700',
+  stroke: '#b8860b',
+  'stroke-width': 1
+};
+let active = null;
+let hideTimer = null;
+
+function el(tag, attrs, parent = chart) {
+  const element = document.createElementNS(NS, tag);
+  Object.entries(attrs).forEach(([key, value]) => element.setAttribute(key, value));
+  parent.append(element);
+  return element;
+}
+
+function text(value, attrs, parent) {
+  const element = el('text', attrs, parent);
+  element.textContent = value;
+  return element;
+}
+
+function roundedStar(cx, cy, outer = 10, inner = 4.3, rounding = .28) {
+  const points = Array.from({ length: 10 }, (_, index) => {
+    const angle = -Math.PI / 2 + index * Math.PI / 5;
+    const radius = index % 2 ? inner : outer;
+    return [cx + Math.cos(angle) * radius, cy + Math.sin(angle) * radius];
+  });
+  const toward = (from, to) => [
+    from[0] + (to[0] - from[0]) * rounding,
+    from[1] + (to[1] - from[1]) * rounding
+  ];
+  return points.map((point, index) => {
+    const before = toward(point, points[(index + 9) % 10]);
+    const after = toward(point, points[(index + 1) % 10]);
+    return `${index ? 'L' : 'M'}${before[0]},${before[1]} Q${point[0]},${point[1]} ${after[0]},${after[1]}`;
+  }).join(' ') + ' Z';
+}
+
+function hideTip() {
+  clearTimeout(hideTimer);
+  tip.style.display = 'none';
+  active?.classList.remove('selected');
+  active = null;
+}
+
+function showTip(item, point, event) {
+  clearTimeout(hideTimer);
+  active = point;
+  document.querySelectorAll('.selected').forEach(element => element.classList.remove('selected'));
+  point.classList.add('selected');
+  tip.replaceChildren();
+
+  const meta = document.createElement('div');
+  meta.className = 'meta';
+  meta.textContent = `${item.dateLabel} · ${tierNames[item.tier]}`;
+  tip.append(meta);
+
+  const heading = document.createElement('h3');
+  heading.textContent = item.title;
+  tip.append(heading);
+
+  const description = document.createElement('p');
+  description.textContent = item.summary;
+  tip.append(description);
+
+  const status = document.createElement('div');
+  status.className = 'status';
+  status.textContent = `${item.ai} · ${item.status}`;
+  tip.append(status);
+
+  const source = document.createElement('a');
+  source.href = item.source;
+  source.target = '_blank';
+  source.rel = 'noopener';
+  source.textContent = 'Source ↗';
+  tip.append(source);
+
+  tip.style.display = 'block';
+  const rect = point.getBoundingClientRect();
+  const cursorX = event?.clientX ?? rect.x + rect.width / 2;
+  const cursorY = event?.clientY ?? rect.y;
+  const tipWidth = tip.offsetWidth;
+  const tipHeight = tip.offsetHeight;
+  tip.style.left = Math.max(12, Math.min(innerWidth - tipWidth - 12, cursorX + 18)) + 'px';
+  tip.style.top = Math.max(12, Math.min(innerHeight - tipHeight - 12, cursorY - tipHeight - 16)) + 'px';
+}
+
+function render(rawItems) {
+  const data = rawItems
+    .map((item, order) => ({
+      ...item,
+      order,
+      dateLabel: new Date(item.date + 'T00:00:00Z').toLocaleDateString('en-GB', {
+        day: 'numeric',
+        month: 'short',
+        year: 'numeric',
+        timeZone: 'UTC'
+      })
+    }))
+    .sort((a, b) => a.date.localeCompare(b.date) || a.order - b.order);
+
+  const total = data.length;
+  const firstDate = new Date(data[0].date + 'T00:00:00Z');
+  const lastDate = new Date(data.at(-1).date + 'T00:00:00Z');
+  const start = Date.UTC(firstDate.getUTCFullYear(), firstDate.getUTCMonth(), 1);
+  const end = lastDate.getTime() + 20 * 24 * 60 * 60 * 1000;
+  const x = date => L + (Date.parse(date) - start) / (end - start) * (W - L - R);
+  const y = value => H - B - value / total * (H - B - T);
+
+  chart.replaceChildren();
+  count.textContent = `${total} notable achievements`;
+  chart.setAttribute('aria-label', `Cumulative timeline of ${total} notable mathematical achievements.`);
+
+  const defs = el('defs', {});
+  const gradient = el('linearGradient', { id: 'area', x1: 0, y1: 0, x2: 0, y2: 1 }, defs);
+  el('stop', { offset: '0%', 'stop-color': '#2362c3', 'stop-opacity': '.09' }, gradient);
+  el('stop', { offset: '100%', 'stop-color': '#2362c3', 'stop-opacity': '.005' }, gradient);
+
+  for (let value = 0; value <= total; value += 5) {
+    el('line', {
+      x1: L,
+      y1: y(value),
+      x2: W - R,
+      y2: y(value),
+      stroke: '#e7edf2',
+      'stroke-dasharray': value ? '3 6' : '0'
+    });
+    text(value, {
+      x: L - 18,
+      y: y(value) + 5,
+      'text-anchor': 'end',
+      fill: '#617486',
+      'font-size': 14
+    });
+  }
+
+  text('Cumulative notable achievements', {
+    x: L,
+    y: 30,
+    fill: '#617486',
+    'font-size': 19.6
+  });
+
+  const months = [];
+  const monthCursor = new Date(start);
+  while (monthCursor.getTime() <= end) {
+    months.push(new Date(monthCursor));
+    monthCursor.setUTCMonth(monthCursor.getUTCMonth() + 1);
+  }
+
+  months.forEach(month => {
+    const isoDate = month.toISOString().slice(0, 10);
+    const position = x(isoDate);
+    text(month.toLocaleDateString('en', { month: 'short', timeZone: 'UTC' }), {
+      x: position,
+      y: H - B + 31,
+      'text-anchor': 'middle',
+      fill: '#617486',
+      'font-size': 14
+    });
+    el('line', {
+      x1: position,
+      x2: position,
+      y1: H - B,
+      y2: H - B + 6,
+      stroke: '#cad6df'
+    });
+  });
+
+  [...new Set(months.map(month => month.getUTCFullYear()))].forEach(year => {
+    const yearMonths = months.filter(month => month.getUTCFullYear() === year);
+    const position = yearMonths.reduce((sum, month) => sum + x(month.toISOString().slice(0, 10)), 0) / yearMonths.length;
+    text(year, {
+      x: position,
+      y: H - 17,
+      'text-anchor': 'middle',
+      fill: '#142a3b',
+      'font-size': 14,
+      'font-weight': 600
+    });
+  });
+
+  text('Achievement date', {
+    x: W - R,
+    y: H - 17,
+    'text-anchor': 'end',
+    fill: '#617486',
+    'font-size': 19.6
+  });
+
+  const coords = data.map((item, index) => [x(item.date), y(index + 1)]);
+  const linePath = coords.map((point, index) => (index ? 'L' : 'M') + point.join(',')).join(' ');
+  el('path', {
+    d: linePath + ` L${coords.at(-1)[0]},${y(0)} L${coords[0][0]},${y(0)} Z`,
+    fill: 'url(#area)'
+  });
+  el('path', {
+    d: linePath,
+    stroke: '#7c9ebb',
+    'stroke-width': 2,
+    fill: 'none',
+    'stroke-linejoin': 'round'
+  });
+
+  data.forEach((item, index) => {
+    const [cx, cy] = coords[index];
+    const point = el('g', {
+      class: 'point',
+      tabindex: 0,
+      role: 'button',
+      'aria-label': `${index + 1}. ${item.title}. ${item.dateLabel}. ${tierNames[item.tier]}. ${item.summary} ${item.status}.`
+    });
+    el('circle', { cx, cy, r: 15, class: 'halo' }, point);
+
+    if (item.tier === 'landmark') {
+      el('path', {
+        d: roundedStar(cx, cy),
+        ...starStyle,
+        class: 'mark'
+      }, point);
+    } else {
+      el('circle', {
+        cx,
+        cy,
+        r: 5.7,
+        fill: item.tier === 'major' ? '#2362c3' : 'white',
+        stroke: item.tier === 'major' ? '#2362c3' : '#708ca0',
+        'stroke-width': 2,
+        class: 'mark'
+      }, point);
+    }
+
+    point.addEventListener('pointerenter', event => showTip(item, point, event));
+    point.addEventListener('pointerleave', event => {
+      if (event.pointerType !== 'touch') hideTimer = setTimeout(hideTip, 220);
+    });
+    point.addEventListener('focus', () => showTip(item, point));
+    point.addEventListener('blur', hideTip);
+    point.addEventListener('click', event => {
+      event.stopPropagation();
+      showTip(item, point, event);
+    });
+    point.addEventListener('keydown', event => {
+      if (event.key === 'Escape') hideTip();
+      if (event.key === 'Enter' || event.key === ' ') {
+        event.preventDefault();
+        showTip(item, point);
+      }
+    });
+
+    if (item.tier === 'landmark') {
+      const labelX = cx - 16;
+      const labelY = cy + 4;
+      el('path', {
+        d: `M${cx - 12},${cy} L${labelX + 12},${labelY - 5}`,
+        fill: 'none',
+        stroke: '#cbb384',
+        'stroke-width': 1
+      });
+      text(item.title, {
+        x: labelX,
+        y: labelY,
+        'text-anchor': 'end',
+        fill: '#94620e',
+        'font-size': 14,
+        'font-weight': 600
+      });
+    }
+  });
+}
+
+async function loadAchievements() {
+  try {
+    const response = await fetch('achievements.json');
+    if (!response.ok) throw new Error(`HTTP ${response.status}`);
+    const data = await response.json();
+    if (!Array.isArray(data) || !data.length) throw new Error('No achievement records');
+    render(data);
+  } catch (error) {
+    count.textContent = 'Data unavailable';
+    chart.replaceChildren();
+    text('Unable to load achievements.', {
+      x: W / 2,
+      y: H / 2,
+      'text-anchor': 'middle',
+      fill: '#617486',
+      'font-size': 18
+    });
+    console.error('Could not load achievements.json:', error);
+  }
+}
+
+const legendStar = document.getElementById('legend-star');
+Object.entries({ d: roundedStar(12, 12), ...starStyle })
+  .forEach(([key, value]) => legendStar.setAttribute(key, value));
+tip.addEventListener('pointerenter', () => clearTimeout(hideTimer));
+tip.addEventListener('pointerleave', () => {
+  hideTimer = setTimeout(hideTip, 200);
+});
+tip.addEventListener('click', event => event.stopPropagation());
+document.addEventListener('click', hideTip);
+document.addEventListener('keydown', event => {
+  if (event.key === 'Escape') hideTip();
+});
+window.addEventListener('resize', hideTip);
+scrollArea.addEventListener('scroll', hideTip);
+loadAchievements();
+</script></body></html>

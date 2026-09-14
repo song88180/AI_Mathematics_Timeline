@@ -1,0 +1,7 @@
+Wikipedia-derived achievement descriptions are adapted from “List of mathematical discoveries by artificial intelligence”, Wikipedia contributors, revision 1374692473, 13 September 2026.
+Source: https://en.wikipedia.org/w/index.php?title=List_of_mathematical_discoveries_by_artificial_intelligence&oldid=1374692473
+This adaptation adds an interactive visualization, editorial importance tiers, and researched daily dates and provenance.
+The package is distributed under Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0).
+License: https://creativecommons.org/licenses/by-sa/4.0/
+License text: https://creativecommons.org/licenses/by-sa/4.0/legalcode
+The linked sources remain subject to their own licenses.
