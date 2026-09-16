@@ -1,7 +1,7 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="An interactive cumulative timeline of mathematical discoveries by AI, based on Wikipedia."><title>A timeline of mathematical discoveries by AI</title><style>
-:root{--ink:#142a3b;--muted:#617486;--line:#dfe7ed;--blue:#2362c3;--bg:#f3f7fa}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,sans-serif}main{max-width:1440px;margin:0 auto;padding:40px 48px 28px}.eyebrow{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--blue);font-weight:700}header{display:flex;justify-content:space-between;align-items:end;gap:24px;margin-bottom:28px}h1{font-size:clamp(28px,3vw,42px);letter-spacing:0;margin:10px 0 8px;font-weight:650}.snapshot{text-align:right;font-size:13px;color:var(--muted);line-height:1.7;white-space:nowrap}.snapshot strong{display:block;color:var(--ink);font-size:22px;font-weight:550}.chart-card{background:white;border:1px solid var(--line);border-radius:18px;box-shadow:0 12px 42px #17395406;overflow:hidden}.chart-top{display:flex;justify-content:flex-end;gap:18px;align-items:center;padding:22px 28px 0}.legend{display:flex;gap:23px;font-size:14px;color:var(--muted);flex-wrap:wrap}.legend span{display:flex;align-items:center;gap:8px}.symbol{width:12px;height:12px;border-radius:50%;display:inline-block;border:2px solid #708ca0}.solid{background:var(--blue);border-color:var(--blue)}.plot-scroll{overflow-x:auto;padding:0 12px}#chart{display:block;width:100%;min-width:940px;height:auto;overflow:visible}.notes{display:flex;justify-content:space-between;align-items:flex-start;gap:40px;margin:23px 4px 0;font-size:14px;line-height:1.65;color:var(--muted)}.notes p{max-width:760px;margin:0}.notes .source{flex:none;white-space:nowrap;font-size:12px}.notes strong{color:var(--ink);font-weight:600}a{color:var(--blue);text-underline-offset:3px}.point{cursor:pointer;outline:none}.point .halo{fill:transparent;stroke:transparent;stroke-width:2}.point:hover .halo,.point:focus .halo,.point.selected .halo{fill:#2362c312;stroke:#2362c340}.tip{position:fixed;width:340px;background:#152c3f;color:white;padding:19px 20px;border-radius:12px;box-shadow:0 12px 36px #12263830;z-index:10;display:none}.tip .meta{font-size:12px;color:#b6cce0}.tip h3{font-size:17px;line-height:1.35;margin:10px 0 8px}.tip p{font-size:14px;color:#dfebf4;margin:0;line-height:1.5}.tip .status{margin-top:12px;border-top:1px solid #ffffff24;padding-top:10px;font-size:12px;color:#b6cce0}.tip a{display:inline-block;margin-top:10px;color:#b9d8ff;font-size:12px}@media(max-width:700px){main{padding:24px 16px}header{align-items:start;flex-direction:column;margin-bottom:22px}.snapshot{text-align:left}.snapshot strong{display:inline;font-size:15px;margin-right:10px}.chart-top{padding:19px 18px 5px;align-items:flex-start}.legend{gap:15px;font-size:13px}.notes{flex-direction:column;gap:12px}.notes .source{white-space:normal}.tip{width:min(340px,calc(100vw - 24px))}}@media(prefers-reduced-motion:reduce){*{transition:none!important}}
-</style></head><body><main><header><div><div class="eyebrow">AI × Mathematics</div><h1>A timeline of mathematical discoveries by AI</h1></div><div class="snapshot"><strong id="count">Loading…</strong>Wikipedia snapshot · 13 September 2026</div></header><section class="chart-card" aria-label="Interactive cumulative discovery timeline"><div class="chart-top"><div class="legend" aria-label="Importance tiers"><span><i class="symbol"></i>Notable advance</span><span><i class="symbol solid"></i>Major advance</span><span><svg viewBox="0 0 24 24" aria-hidden="true" style="display:block;width:22px;min-width:22px;height:22px;overflow:visible"><path id="legend-star"/></svg>Landmark</span></div></div><div class="plot-scroll"><svg id="chart" viewBox="0 0 1240 650" role="group" aria-label="Cumulative timeline of notable mathematical achievements."></svg></div></section><div class="notes"><p><strong>How importance is assigned.</strong> Notable: specialized improvements or batch progress. Major: substantial conjecture, bound, or formalization advances. Landmark: foundational, longstanding problems with broad significance if confirmed. These tiers are editorial, independent of verification, and are not Wikipedia ratings.</p><span class="source">Source: <a href="https://en.wikipedia.org/w/index.php?title=List_of_mathematical_discoveries_by_artificial_intelligence&amp;oldid=1374692473" target="_blank" rel="noopener">Wikipedia · archived revision</a></span></div></main><div id="tip" class="tip" role="tooltip"></div><script>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="An interactive cumulative timeline of mathematical discoveries by AI, based mainly on VibeMathed significance scores."><title>A timeline of mathematical discoveries by AI</title><style>
+:root{--ink:#142a3b;--muted:#617486;--line:#dfe7ed;--blue:#2362c3;--bg:#f3f7fa}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,sans-serif}main{max-width:1440px;margin:0 auto;padding:40px 48px 28px}.eyebrow{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--blue);font-weight:700}header{display:flex;justify-content:space-between;align-items:end;gap:24px;margin-bottom:28px}h1{font-size:clamp(28px,3vw,42px);letter-spacing:0;margin:10px 0 8px;font-weight:650}.snapshot{text-align:right;font-size:13px;color:var(--muted);line-height:1.7;white-space:nowrap}.snapshot strong{display:block;color:var(--ink);font-size:22px;font-weight:550}.chart-card{background:white;border:1px solid var(--line);border-radius:18px;box-shadow:0 12px 42px #17395406;overflow:hidden}.chart-top{display:flex;justify-content:flex-end;gap:18px;align-items:center;padding:22px 28px 0}.legend{display:flex;gap:23px;font-size:14px;color:var(--muted);flex-wrap:wrap}.legend span{display:flex;align-items:center;gap:8px}.symbol{width:12px;height:12px;border-radius:50%;display:inline-block;border:2px solid #708ca0}.solid{background:var(--blue);border-color:var(--blue)}.plot-scroll{overflow-x:auto;padding:0 12px}#chart{display:block;width:100%;min-width:940px;height:auto;overflow:visible}.notes{display:flex;justify-content:space-between;align-items:flex-start;gap:40px;margin:23px 4px 0;font-size:14px;line-height:1.65;color:var(--muted)}.notes p{max-width:760px;margin:0}.notes .source{flex:none;white-space:nowrap;font-size:12px}.notes strong{color:var(--ink);font-weight:600}a{color:var(--blue);text-underline-offset:3px}.point{cursor:pointer;outline:none}.point .halo{fill:transparent;stroke:transparent;stroke-width:2}.point:hover .halo,.point:focus .halo,.point.selected .halo{fill:#2362c312;stroke:#2362c340}.tip{position:fixed;width:340px;background:#152c3f;color:white;padding:19px 20px;border-radius:12px;box-shadow:0 12px 36px #12263830;z-index:10;display:none}.tip .meta{font-size:12px;color:#b6cce0}.tip .significance{margin-top:8px;color:#ffd86b;font-size:13px;font-weight:700;letter-spacing:.02em}.tip h3{font-size:17px;line-height:1.35;margin:10px 0 8px}.tip p{font-size:14px;color:#dfebf4;margin:0;line-height:1.5}.tip .status{margin-top:12px;border-top:1px solid #ffffff24;padding-top:10px;font-size:12px;color:#b6cce0}.tip a{display:inline-block;margin-top:10px;color:#b9d8ff;font-size:12px}@media(max-width:700px){main{padding:24px 16px}header{align-items:start;flex-direction:column;margin-bottom:22px}.snapshot{text-align:left}.snapshot strong{display:inline;font-size:15px;margin-right:10px}.chart-top{padding:19px 18px 5px;align-items:flex-start}.legend{gap:15px;font-size:13px}.notes{flex-direction:column;gap:12px}.notes .source{white-space:normal}.tip{width:min(340px,calc(100vw - 24px))}}@media(prefers-reduced-motion:reduce){*{transition:none!important}}
+</style></head><body><main><header><div><div class="eyebrow">AI × Mathematics</div><h1>A timeline of mathematical discoveries by AI</h1></div><div class="snapshot"><strong id="count">Loading…</strong>VibeMathed snapshot · 15 September 2026</div></header><section class="chart-card" aria-label="Interactive cumulative discovery timeline"><div class="chart-top"><div class="legend" aria-label="Importance tiers"><span><i class="symbol"></i>Notable advance</span><span><i class="symbol solid"></i>Major advance</span><span><svg viewBox="0 0 24 24" aria-hidden="true" style="display:block;width:22px;min-width:22px;height:22px;overflow:visible"><path id="legend-star"/></svg>Landmark</span></div></div><div class="plot-scroll"><svg id="chart" viewBox="0 0 1240 650" role="group" aria-label="Cumulative timeline of notable mathematical achievements."></svg></div></section><div class="notes"><p><strong>How importance is assigned.</strong> Importance is based mainly on VibeMathed significance scores: 40–49 is notable, 50–60 is major, and above 60 is landmark. Records without a VibeMathed score retain their editorial tier. Importance is independent of verification status.</p><span class="source">Source: <a href="https://vibemathed.com" target="_blank" rel="noopener">VibeMathed</a></span></div></main><div id="tip" class="tip" role="tooltip"></div><script>
 const chart = document.getElementById('chart');
 const count = document.getElementById('count');
 const tip = document.getElementById('tip');
@@ -74,6 +74,13 @@ function showTip(item, point, event) {
   meta.className = 'meta';
   meta.textContent = `${item.dateLabel} · ${tierNames[item.tier]}`;
   tip.append(meta);
+
+  if (Number.isFinite(item.vibemathed_significance)) {
+    const significance = document.createElement('div');
+    significance.className = 'significance';
+    significance.textContent = `significance ${item.vibemathed_significance}`;
+    tip.append(significance);
+  }
 
   const heading = document.createElement('h3');
   heading.textContent = item.title;
@@ -209,6 +216,35 @@ function render(rawItems) {
   });
 
   const coords = data.map((item, index) => [x(item.date), y(index + 1)]);
+  const landmarkLabelGap = 28;
+  const landmarkLabelMinY = T + 8;
+  const landmarkLabelMaxY = H - B - 6;
+  const landmarkLabels = data
+    .map((item, index) => ({ item, desiredY: coords[index][1] + 4 }))
+    .filter(({ item }) => item.tier === 'landmark')
+    .sort((a, b) => a.desiredY - b.desiredY);
+  const landmarkLabelPositions = landmarkLabels.map(({ desiredY }) =>
+    Math.max(desiredY, landmarkLabelMinY)
+  );
+
+  for (let index = 1; index < landmarkLabelPositions.length; index += 1) {
+    landmarkLabelPositions[index] = Math.max(
+      landmarkLabelPositions[index],
+      landmarkLabelPositions[index - 1] + landmarkLabelGap
+    );
+  }
+  if (landmarkLabelPositions.at(-1) > landmarkLabelMaxY) {
+    landmarkLabelPositions[landmarkLabelPositions.length - 1] = landmarkLabelMaxY;
+    for (let index = landmarkLabelPositions.length - 2; index >= 0; index -= 1) {
+      landmarkLabelPositions[index] = Math.min(
+        landmarkLabelPositions[index],
+        landmarkLabelPositions[index + 1] - landmarkLabelGap
+      );
+    }
+  }
+  const landmarkLabelY = new Map(
+    landmarkLabels.map(({ item }, index) => [item, landmarkLabelPositions[index]])
+  );
   const linePath = coords.map((point, index) => (index ? 'L' : 'M') + point.join(',')).join(' ');
   el('path', {
     d: linePath + ` L${coords.at(-1)[0]},${y(0)} L${coords[0][0]},${y(0)} Z`,
@@ -269,10 +305,10 @@ function render(rawItems) {
     });
 
     if (item.tier === 'landmark') {
-      const labelX = cx - 16;
-      const labelY = cy + 4;
+      const labelX = cx - 56;
+      const labelY = landmarkLabelY.get(item);
       el('path', {
-        d: `M${cx - 12},${cy} L${labelX + 12},${labelY - 5}`,
+        d: `M${cx - 12},${cy} L${cx - 22},${cy} L${labelX + 9},${labelY - 5}`,
         fill: 'none',
         stroke: '#cbb384',
         'stroke-width': 1

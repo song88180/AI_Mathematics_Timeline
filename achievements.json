@@ -1,209 +1,482 @@
 [
   {
     "date": "2025-11-17",
-    "title": "Kissing-number bounds",
+    "title": "Kissing-number lower bounds",
     "ai": "Reinforcement learning",
     "tier": "notable",
-    "summary": "PackingStar recast sphere packing as a cooperative matrix-completion game and found geometric configurations that improved 15 longstanding lower bounds for kissing numbers and related spherical codes.",
+    "summary": "The kissing-number problem asks how many nonoverlapping unit spheres can touch a central unit sphere. New configurations improve 15 long-standing lower bounds for kissing numbers and related spherical codes.",
     "status": "Research paper",
-    "source": "https://arxiv.org/abs/2511.13391"
+    "source": "https://arxiv.org/abs/2511.13391",
+    "vibemathed_significance": null
   },
   {
     "date": "2026-01-29",
     "title": "Erdős problem survey",
     "ai": "Gemini",
     "tier": "notable",
-    "summary": "Gemini screened 700 conjectures marked open in the Erdős Problems database. Human review identified five seemingly new solutions and eight problems whose earlier solutions were hidden in the literature.",
+    "summary": "A survey of 700 problems marked open in the Erdős database found five apparently new solutions and eight problems whose earlier solutions had been overlooked.",
     "status": "Research paper",
-    "source": "https://arxiv.org/abs/2601.22401"
+    "source": "https://arxiv.org/abs/2601.22401",
+    "vibemathed_significance": null
   },
   {
-    "date": "2026-05-20",
-    "title": "Unit-distance conjecture",
-    "ai": "OpenAI internal model",
-    "tier": "major",
-    "summary": "The model constructed an infinite family of planar point sets with polynomially more unit-distance pairs than the square-grid construction, disproving the prevailing asymptotic conjecture. External mathematicians checked the proof.",
-    "status": "Announced disproof",
-    "source": "https://openai.com/index/model-disproves-discrete-geometry-conjecture/"
+    "date": "2026-05-01",
+    "title": "Erdős unit-distance conjecture",
+    "ai": "OpenAI frontier model (specific version not disclosed) + Noga Alon + Thomas Bloom + Timothy Gowers + Daniel Litt + Will Sawin + Jacob Tsimerman + Melanie Matchett Wood",
+    "tier": "notable",
+    "summary": "The unit-distance problem asks how many pairs among a given number of planar points can be exactly one unit apart. The conjectured asymptotic upper bound is disproved by a denser infinite family of configurations.",
+    "status": "Expert Verified · Announcement",
+    "source": "https://arxiv.org/abs/2605.20695",
+    "vibemathed_significance": 40
   },
   {
     "date": "2026-05-21",
-    "title": "Erdős & OEIS proofs",
+    "title": "Erdős and OEIS conjecture proofs",
     "ai": "DeepMind",
     "tier": "notable",
-    "summary": "A Lean-verified proof-search agent resolved 9 of 353 open Erdős problems and proved 44 of 492 conjectures drawn from the OEIS.",
+    "summary": "A formal proof-search study resolved 9 of 353 open Erdős problems and proved 44 of 492 conjectures selected from the Online Encyclopedia of Integer Sequences.",
     "status": "Research paper",
-    "source": "https://arxiv.org/abs/2605.22763"
+    "source": "https://arxiv.org/abs/2605.22763",
+    "vibemathed_significance": null
   },
   {
-    "date": "2026-07-16",
-    "title": "Cycle double cover",
+    "date": "2026-07-10",
+    "title": "Cycle double cover conjecture",
     "ai": "GPT-5.6 Sol Ultra",
-    "tier": "landmark",
-    "summary": "The reported proof shows that every bridgeless graph has a collection of cycles covering each edge exactly twice. Independent expositions and a Lean formalization were subsequently released.",
-    "status": "Independent expositions published",
-    "source": "https://arxiv.org/abs/2607.15399"
+    "tier": "major",
+    "summary": "The cycle double cover conjecture states that every bridgeless graph has a collection of cycles covering each edge exactly twice. The reported proof establishes this long-standing graph-theory statement.",
+    "status": "Lean Checked · Announcement",
+    "source": "https://www.scientificamerican.com/article/chatgpt-just-proved-another-50-year-old-math-conjecture/",
+    "vibemathed_significance": 55
   },
   {
-    "date": "2026-07-31",
+    "date": "2026-07-20",
     "title": "Jacobian conjecture",
-    "ai": "Claude Fable 5 + Alpöge",
+    "ai": "Claude Fable 5 + Levent Alpöge",
     "tier": "landmark",
-    "summary": "Alpöge and Claude gave a polynomial map in three variables with constant nonzero Jacobian determinant that is not invertible. The construction refutes the Jacobian conjecture in every dimension greater than two.",
-    "status": "Reported disproof",
-    "source": "https://arxiv.org/abs/2608.00222"
+    "summary": "The Jacobian conjecture states that every complex polynomial map with constant nonzero Jacobian determinant has a polynomial inverse. A three-variable counterexample disproves the conjecture in dimensions three and above; the plane case remains open.",
+    "status": "Expert Verified · Announcement",
+    "source": "https://officechai.com/ai/an-anthropic-researcher-says-fable-just-helped-him-disprove-the-85-year-old-jacobian-conjecture/",
+    "vibemathed_significance": 65
   },
   {
     "date": "2026-07-22",
-    "title": "Dinitz–Garg–Goemans",
+    "title": "Dinitz–Garg–Goemans conjecture",
     "ai": "GPT-5.6 Pro + Rybin",
     "tier": "major",
-    "summary": "The model found a network in which a divisible multicommodity flow costs 58, while every unsplittable flow respecting the stated capacity margin costs at least 60. This counterexample disproves the conjectured cost-preserving rounding guarantee.",
+    "summary": "The conjecture proposed a cost-preserving way to round divisible multicommodity flows into unsplittable flows under a capacity margin. A network whose best divisible and unsplittable costs differ provides a counterexample.",
     "status": "Reported disproof",
-    "source": "https://x.com/DmitryRybin1/status/2079904005652893709"
+    "source": "https://x.com/DmitryRybin1/status/2079904005652893709",
+    "vibemathed_significance": null
   },
   {
     "date": "2026-07-27",
     "title": "Crouzeix’s conjecture",
     "ai": "GPT-5.6 Sol + Jin",
     "tier": "major",
-    "summary": "The manuscript proves the sharp inequality ‖p(A)‖ ≤ 2 max|p(z)| over the numerical range of every complex matrix A. This establishes that the numerical range is always a 2-spectral set.",
+    "summary": "Crouzeix’s conjecture states that evaluating a polynomial on a complex matrix increases its norm by at most twice its maximum over the numerical range. The sharp constant 2 is established.",
     "status": "Expert-reviewed; independent proof reported",
-    "source": "https://www.preprints.org/manuscript/202607.1919/v1"
+    "source": "https://www.preprints.org/manuscript/202607.1919/v1",
+    "vibemathed_significance": null
   },
   {
     "date": "2026-08-01",
     "title": "Ten mathematical advances",
     "ai": "OpenAI Astra",
     "tier": "major",
-    "summary": "OpenAI reported ten model-assisted results across mathematics and theoretical computer science, including constructions related to non-sofic groups. The results were released together as a single, not-yet-peer-reviewed batch.",
+    "summary": "A single research release presented ten results across mathematics and theoretical computer science, including advances on sofic groups, operator-algebra rigidity, and high-dimensional sphere packing.",
     "status": "Not peer-reviewed",
-    "source": "https://openai.com/index/ten-advances-in-mathematics/"
+    "source": "https://openai.com/index/ten-advances-in-mathematics/",
+    "vibemathed_significance": null
   },
   {
     "date": "2026-08-05",
     "title": "Sendov’s conjecture",
-    "ai": "AI + Mazur; Tao",
-    "tier": "major",
-    "summary": "The proof establishes that every zero of a monic polynomial in the unit disk lies within distance one of a critical point. A Lean formalization was produced and Tao published an examination of the argument.",
-    "status": "Examined by Tao",
-    "source": "https://www.proofatlas.ai/papers/sendov-conjecture/SENDOV_CONJECTURE_PROOF_AUGUST_5_2026.pdf"
+    "ai": "GPT-5.6 Pro + Lech Mazur",
+    "tier": "notable",
+    "summary": "Sendov’s conjecture states that every zero of a polynomial whose zeros lie in the unit disk is within distance one of a critical point. The result settles the statement for every polynomial degree.",
+    "status": "Lean Verified · Preprint",
+    "source": "https://www.proofatlas.ai/papers/sendov-conjecture/SENDOV_CONJECTURE_PROOF_AUGUST_5_2026.pdf",
+    "vibemathed_significance": 40
   },
   {
     "date": "2026-08-10",
-    "title": "Zeta zeros on the critical line",
-    "ai": "Claude",
-    "tier": "major",
-    "summary": "Claude-assisted work reportedly raised the proven lower proportion of nontrivial Riemann zeta zeros on the critical line to 67.25%. This strengthens a quantitative approximation to the Riemann hypothesis without proving it.",
-    "status": "Announced result",
-    "source": "https://www.anthropic.com/research/riemann-zeta"
+    "title": "Riemann zeta zeros on the critical line",
+    "ai": "Claude (unreleased research version) + Jarred Sumner + Levent Alpöge + Ralph Furman + Eric Easley",
+    "tier": "landmark",
+    "summary": "The Riemann hypothesis places every nontrivial zeta zero on the critical line. This unconditional result raises the known proportion of simple zeros on that line to at least 67.25 percent; it does not prove the hypothesis.",
+    "status": "Lean Checked · Preprint",
+    "source": "https://arxiv.org/abs/2608.13637",
+    "vibemathed_significance": 68
   },
   {
     "date": "2026-08-12",
-    "title": "Hadamard matrix constructions",
+    "title": "Hadamard matrices below order 2000",
     "ai": "Claude + collaborators",
     "tier": "notable",
-    "summary": "The team supplied explicit ±1 Hadamard matrices for the twelve previously unresolved admissible orders below 2000, including order 668. Exact multiplication verifies each matrix, while the general Hadamard conjecture remains open.",
+    "summary": "The Hadamard conjecture predicts a plus-or-minus-one matrix of every positive order divisible by four with mutually orthogonal rows. Explicit matrices settle the twelve previously unresolved admissible orders below 2000; the general conjecture remains open.",
     "status": "Reported constructions; general conjecture open",
-    "source": "https://vibemathed.com/problem/hadamard-matrix-of-order-668"
+    "source": "https://vibemathed.com/problem/hadamard-matrix-of-order-668",
+    "vibemathed_significance": null
   },
   {
     "date": "2026-08-13",
     "title": "OEIS conjecture campaign",
     "ai": "Epoch AI · various LLMs",
     "tier": "notable",
-    "summary": "A multi-model campaign tested open conjectures drawn from the OEIS and reported 147 proofs or counterexamples. The study measures scalable conjecture-solving and partly overlaps the earlier DeepMind corpus.",
+    "summary": "A large-scale study of open conjectures from the Online Encyclopedia of Integer Sequences reported 147 proofs or counterexamples, measuring how automated conjecture solving scales across a broad corpus.",
     "status": "Research paper",
-    "source": "https://arxiv.org/html/2608.11941"
+    "source": "https://arxiv.org/html/2608.11941",
+    "vibemathed_significance": null
   },
   {
     "date": "2026-08-23",
-    "title": "Record elliptic-curve ranks",
-    "ai": "Claude + Alpöge / Howell",
+    "title": "Elliptic-curve rank 31",
+    "ai": "Claude + Levent Alpöge + Ava Howell",
     "tier": "major",
-    "summary": "Two explicit elliptic curves over the rationals were accompanied by independent rational points proving ranks of at least 30 and 31. These surpassed the previous reported rank record of 29.",
-    "status": "Reported records",
-    "source": "https://elliptic-rank.icarm.cloud/curve/302"
+    "summary": "Whether elliptic curves over the rationals have unbounded rank remains open. An explicit curve with 31 independent rational points raises the unconditional record to at least 31; exact rank claims require additional conjectural assumptions.",
+    "status": "Unreviewed · Announcement",
+    "source": "https://elliptic-rank.icarm.cloud/curve/302",
+    "vibemathed_significance": 50
   },
   {
     "date": "2026-08-24",
-    "title": "Hopf problem on S⁶",
-    "ai": "Claude + Alpöge",
+    "title": "Complex structure on the six-sphere",
+    "ai": "Claude + Levent Alpöge",
     "tier": "landmark",
-    "summary": "The manuscript constructs a compact complex threefold fibred by two-dimensional tori and argues that its underlying smooth manifold is S⁶. If correct, this gives the six-sphere an integrable complex structure and resolves Hopf’s 1948 problem.",
-    "status": "Not independently verified",
-    "source": "https://alpo.ge/s6.pdf"
+    "summary": "Hopf’s 1948 problem asks whether the six-sphere admits an integrable complex structure. The manuscript claims an explicit complex threefold diffeomorphic to the six-sphere; the result awaits independent verification.",
+    "status": "Unreviewed · Preprint",
+    "source": "https://alpo.ge/s6.pdf",
+    "vibemathed_significance": 65
   },
   {
     "date": "2026-08-25",
-    "title": "Erdős–Rankin improvement",
-    "ai": "GPT-5.6 Sol",
+    "title": "Large prime-gap lower bound",
+    "ai": "GPT 5.6 Sol + DottedCalculator (prompting and submission) + Boris Alexeev (Lean formalisation)",
     "tier": "major",
-    "summary": "The model found and formalized a stronger tilted residue-class construction for unusually long intervals containing no primes. The result improves a key ingredient in the Erdős–Rankin method for large prime gaps.",
-    "status": "Reported Lean formalization",
-    "source": "https://vibemathed.com/problem/tilted-residue-class-construction-for-long-prime-free-intervals"
-  },
-  {
-    "date": "2026-08-30",
-    "title": "Short prime gaps",
-    "ai": "OpenAI",
-    "tier": "major",
-    "summary": "The manuscript claims infinitely many pairs of primes differ by at most 186, lowering the previous unconditional bound. The result narrows the gap toward the twin-prime conjecture but does not prove a gap of two.",
-    "status": "Not independently verified",
-    "source": "https://cdn.openai.com/pdf/51126fac-1b68-4128-9666-c908bcc16033/short_gaps.pdf"
+    "summary": "The large-gap problem asks how far apart consecutive primes can be infinitely often. A tilted residue-class construction improves the preceding asymptotic lower bound by an unbounded iterated-logarithm factor.",
+    "status": "Expert Verified · Announcement",
+    "source": "https://github.com/DottedCalculator/ai-math/blob/main/Erdos_4_GPT_5.6_Sol.pdf",
+    "vibemathed_significance": 60
   },
   {
     "date": "2026-09-03",
-    "title": "Dying percolation conjecture",
-    "ai": "Claude",
-    "tier": "major",
-    "summary": "The project reports a proof of the dying-percolation conjecture together with a Lean formalization, turning the probabilistic statement into a machine-checkable theorem.",
-    "status": "Reported Lean formalization",
-    "source": "https://github.com/anthropics/formal-math/blob/795efb86f191735c5481675763537cfb4ff37e55/percolation/README.md"
+    "title": "Bounded prime gaps at 186",
+    "ai": "GPT 6 Astra",
+    "tier": "landmark",
+    "summary": "The bounded-gaps problem asks how close together consecutive primes can occur infinitely often. Subject to three stated analytic and numerical inputs, this result lowers the unconditional upper bound to 186; the twin-prime target remains 2.",
+    "status": "Lean Checked · Announcement",
+    "source": "https://github.com/openai/PrimeGaps186",
+    "vibemathed_significance": 62
+  },
+  {
+    "date": "2026-09-03",
+    "title": "Critical bond percolation in every dimension",
+    "ai": "Anthropic Claude models (specific version undisclosed) + Justin Leder",
+    "tier": "landmark",
+    "summary": "For nearest-neighbor bond percolation on the integer lattice, the question asks whether an infinite open cluster exists at the critical probability. The reported result proves that the probability of such a cluster at criticality is zero in every dimension at least two.",
+    "status": "Lean Verified · Announcement",
+    "source": "https://github.com/anthropics/formal-math/tree/795efb86f191735c5481675763537cfb4ff37e55/percolation",
+    "vibemathed_significance": 78
   },
   {
     "date": "2026-09-04",
-    "title": "Kozma–Nitzan follow-up",
+    "title": "Kozma–Nitzan percolation conjectures",
     "ai": "ChatGPT + Claude + Bou-Rabee",
     "tier": "major",
-    "summary": "A follow-up project claims proofs of the remaining Kozma–Nitzan percolation conjectures and supplies Lean formalizations. It extends the preceding dying-percolation result rather than duplicating it.",
+    "summary": "The remaining Kozma–Nitzan conjectures concern critical behavior in percolation. A follow-up project reports proofs and formalizations extending the result on the absence of critical infinite clusters.",
     "status": "Claimed proof; Lean formalization",
-    "source": "https://nitromannitol.github.io/kn1-verification-b80e9/"
+    "source": "https://nitromannitol.github.io/kn1-verification-b80e9/",
+    "vibemathed_significance": null
   },
   {
     "date": "2026-09-04",
     "title": "Fermat’s Last Theorem formalization",
     "ai": "Claude + collaborators",
     "tier": "major",
-    "summary": "Claude and collaborators translated the classical proof of Fermat’s Last Theorem into Lean, producing a computer-checkable verification of the theorem. The mathematical result was already known; the achievement is the formalization.",
+    "summary": "Fermat’s Last Theorem states that no three positive integers satisfy aⁿ + bⁿ = cⁿ for n greater than two. Its classical proof has been translated into a computer-checkable formal development.",
     "status": "Reported Lean formalization",
-    "source": "https://www.anthropic.com/research/formalizing-fermats-last-theorem"
+    "source": "https://www.anthropic.com/research/formalizing-fermats-last-theorem",
+    "vibemathed_significance": null
   },
   {
-    "date": "2026-09-04",
-    "title": "Köthe conjecture",
-    "ai": "GPT-6 Astra + Epoch AI",
-    "tier": "landmark",
-    "summary": "The project reports an explicit counterexample to Köthe’s conjecture, which asks whether the sum of two nil left ideals must be nil. A Lean check accompanies the construction.",
-    "status": "Reported Lean check",
-    "source": "https://github.com/tadamcz/koethe"
-  },
-  {
-    "date": "2026-09-05",
-    "title": "Navier–Stokes regularity",
-    "ai": "OpenAI internal model",
-    "tier": "landmark",
-    "summary": "OpenAI reported a proof addressing whether smooth three-dimensional Navier–Stokes flows can develop singularities in finite time. The claimed Millennium Prize solution remains unverified and its priority is disputed.",
-    "status": "Unverified; priority disputed",
-    "source": "https://openai.com/index/navier-stokes-solution/"
-  },
-  {
-    "date": "2026-09-05",
-    "title": "Ibragimov–Iosifescu conjecture",
-    "ai": "GPT-6 Astra + Epoch AI",
+    "date": "2026-09-03",
+    "title": "Köthe’s conjecture",
+    "ai": "GPT-6 Astra (pre-release) + Tom Adamczewski",
     "tier": "major",
-    "summary": "The project claims a counterexample to the Ibragimov–Iosifescu central limit conjecture for φ-mixing sequences, showing the stated mixing assumptions do not guarantee the proposed limit behavior.",
-    "status": "Claimed disproof",
-    "source": "https://github.com/tadamcz/phi-mixing-clt/blob/main/info.json"
+    "summary": "Köthe’s conjecture asks whether the sum of two nil left ideals is always nil. A constructed ring contains a nil ideal whose two-by-two matrix ideal has a nonnilpotent element, disproving the conjecture.",
+    "status": "Lean Verified · Announcement",
+    "source": "https://github.com/tadamcz/koethe",
+    "vibemathed_significance": 60
+  },
+  {
+    "date": "2026-09-05",
+    "title": "Navier–Stokes breakdown with smooth forcing",
+    "ai": "Unnamed internal OpenAI model",
+    "tier": "landmark",
+    "summary": "The Clay problem asks whether smooth three-dimensional Navier–Stokes data can develop a finite-time singularity. The reported solution uses smooth external forcing, addressing the permitted forced formulations while leaving the unforced case unresolved.",
+    "status": "Lean Verified · Preprint",
+    "source": "https://openai.com/index/navier-stokes-solution/",
+    "vibemathed_significance": 87
+  },
+  {
+    "date": "2026-09-05",
+    "title": "Ibragimov–Iosifescu central limit conjecture",
+    "ai": "GPT-6 Astra (pre-release) + Tom Adamczewski",
+    "tier": "notable",
+    "summary": "The conjecture predicted a central limit theorem for stationary, φ-mixing sequences with finite variance and diverging partial-sum variance. A counterexample shows that normalized sums can instead converge to zero along a subsequence.",
+    "status": "Lean Checked · Announcement",
+    "source": "https://github.com/tadamcz/phi-mixing-clt",
+    "vibemathed_significance": 40
+  },
+  {
+    "date": "2026-09-08",
+    "title": "Boussinesq blowup with smooth forcing",
+    "ai": "Claude, Codex with GPT-5.6 Sol + Levent Alpöge + Tristan Buckmaster",
+    "tier": "notable",
+    "summary": "The inviscid Boussinesq problem asks whether smooth initial data and space-time smooth forcing can produce a finite-time singularity. The reported construction gives such blowup on the plane while the temperature remains bounded.",
+    "status": "Lean Verified · Preprint",
+    "source": "https://cims.nyu.edu/~tristanb/boussinesq.pdf",
+    "vibemathed_significance": 45
+  },
+  {
+    "date": "2026-09-08",
+    "title": "Euler blowup with smooth forcing",
+    "ai": "Claude, Codex with GPT-5.6 Sol + Levent Alpöge + Tristan Buckmaster",
+    "tier": "landmark",
+    "summary": "The three-dimensional incompressible Euler problem asks whether a smooth flow can lose regularity in finite time. The reported construction produces genuine blowup from smooth data under space-time smooth forcing.",
+    "status": "Lean Verified · Preprint",
+    "source": "https://cims.nyu.edu/~tristanb/euler.pdf",
+    "vibemathed_significance": 70
+  },
+  {
+    "date": "2026-09-03",
+    "title": "Bounded prime gaps at 212",
+    "ai": "AxiomProver + François Charton + Letong Hong + Kenny Lau + Ken Ono + Guillaume Remy + Ho Chung Siu + Ashvin A. Swaminathan + Jesse Thorner + Yunzhou Xie",
+    "tier": "landmark",
+    "summary": "The bounded-gaps problem asks how close together consecutive primes can occur infinitely often. This result proved that infinitely many consecutive prime pairs differ by at most 212, improving the previous bound of 240.",
+    "status": "Lean Checked · Preprint",
+    "source": "https://primegaps.axiommath.ai/bgp212.pdf",
+    "vibemathed_significance": 62
+  },
+  {
+    "date": "2026-09-03",
+    "title": "Smale’s mean value conjecture",
+    "ai": "GPT-6 Astra (pre-release) + Tom Adamczewski",
+    "tier": "notable",
+    "summary": "Smale asked whether the universal constant in his mean value theorem for complex polynomials could be reduced from 4 to 1. A polynomial counterexample shows that the constant 1 is impossible.",
+    "status": "Lean Verified · Announcement",
+    "source": "https://github.com/tadamcz/mean-value-problem",
+    "vibemathed_significance": 45
+  },
+  {
+    "date": "2026-09-03",
+    "title": "Maximal prime-gap lower bound",
+    "ai": "GPT 6 Astra",
+    "tier": "major",
+    "summary": "The maximal prime-gap problem asks how large gaps between consecutive primes can become. This result improves the asymptotic lower bound through a stronger short-translates theorem combined with an Erdős–Rankin covering argument.",
+    "status": "Site Confirmed · Preprint",
+    "source": "https://cdn.openai.com/pdf/51126fac-1b68-4128-9666-c908bcc16033/long_gaps.pdf",
+    "vibemathed_significance": 60
+  },
+  {
+    "date": "2026-09-01",
+    "title": "Bounded prime gaps at 236",
+    "ai": "unspecified AI agents + Shiva Kintali",
+    "tier": "landmark",
+    "summary": "The bounded-gaps problem asks how close together consecutive primes can occur infinitely often. This announcement established an upper bound of 236, improving 240 before being superseded by stronger results.",
+    "status": "Unreviewed · Announcement",
+    "source": "https://x.com/ShivaKintali/status/2095547543061135765",
+    "vibemathed_significance": 62
+  },
+  {
+    "date": "2026-09-01",
+    "title": "Four-uniform Erdős matching conjecture",
+    "ai": "GPT-5.6 Sol; Astra; GPT-5 Pro; GPT-6 Pro",
+    "tier": "notable",
+    "summary": "The Erdős matching conjecture gives the maximum size of a uniform set family with bounded matching number. The reported result settles every parameter in the four-uniform case; higher uniformities remain open.",
+    "status": "Unreviewed · Announcement",
+    "source": "https://github.com/aconsciousfractal/Four-Uniform-Erdos-Matching-Conjecture/blob/60ce10893953bcf3ac0642d992b18dc0ac41d5b9/paper/Four-Uniform-Erdos-Matching-Conjecture.pdf",
+    "vibemathed_significance": 40
+  },
+  {
+    "date": "2026-08-28",
+    "title": "Erdős problem 1: sum-distinct sets",
+    "ai": "GPT-6 Astra (pre-release) + Tom Adamczewski",
+    "tier": "major",
+    "summary": "A set is sum-distinct when all of its subset sums differ. Erdős proposed a universal exponential lower bound on the containing interval; arbitrarily large counterexamples show that no such constant-factor bound exists.",
+    "status": "Lean Verified · Announcement",
+    "source": "https://github.com/tadamcz/erdos1",
+    "vibemathed_significance": 50
+  },
+  {
+    "date": "2026-08-26",
+    "title": "Erdős problem 571: bipartite Turán exponents",
+    "ai": "GPT-6 Astra (pre-release) + Tom Adamczewski",
+    "tier": "major",
+    "summary": "This problem asks which growth exponents occur as Turán numbers of a single bipartite graph. The result realizes every rational exponent from 1 up to, but not including, 2.",
+    "status": "Lean Verified · Announcement",
+    "source": "https://github.com/tadamcz/erdos571",
+    "vibemathed_significance": 52
+  },
+  {
+    "date": "2026-08-26",
+    "title": "Erdős problem 548: Erdős–Sós conjecture",
+    "ai": "GPT-6 Astra (pre-release) + Tom Adamczewski",
+    "tier": "major",
+    "summary": "The Erdős–Sós conjecture states that a graph with average degree greater than k − 1 contains every tree with k edges. The reported result establishes the full density statement.",
+    "status": "Lean Verified · Announcement",
+    "source": "https://github.com/tadamcz/erdos548",
+    "vibemathed_significance": 58
+  },
+  {
+    "date": "2026-08-24",
+    "title": "Nevanlinna’s half-plane problem",
+    "ai": "GPT-5.6 Sol Ultra + Quanyu Tang + Bokai Cui + Wei He + Tao Hu + Yanyang Li + Ke Wang + Zijun Yu",
+    "tier": "notable",
+    "summary": "Nevanlinna asked whether a meromorphic function omitting three values in a half-plane must be of bounded type there. A real meromorphic counterexample gives a negative answer for both half-planes.",
+    "status": "Unreviewed · Preprint",
+    "source": "https://arxiv.org/abs/2608.26062",
+    "vibemathed_significance": 45
+  },
+  {
+    "date": "2026-08-20",
+    "title": "de Bruijn–Newman constant upper bound",
+    "ai": "Claude; ChatGPT and Codex (versions undisclosed) + Jude Gomila",
+    "tier": "notable",
+    "summary": "The de Bruijn–Newman constant measures when zeros in a heat-flow deformation of the Riemann xi function become entirely real. Its upper bound is reduced to 0.1787854; the Riemann hypothesis corresponds to a bound of zero.",
+    "status": "Unreviewed · Announcement",
+    "source": "https://github.com/judegomila/dbn-lambda-01787854-candidate-audit",
+    "vibemathed_significance": 45
+  },
+  {
+    "date": "2026-08-20",
+    "title": "Elliptic-curve rank 30",
+    "ai": "Claude + Levent Alpöge + Ava Howell",
+    "tier": "major",
+    "summary": "Whether elliptic curves over the rationals have unbounded rank remains open. An explicit curve with 30 independent rational points raised the unconditional record before a rank-31 example superseded it three days later.",
+    "status": "Unreviewed · Announcement",
+    "source": "https://elliptic-rank.icarm.cloud/curve/273",
+    "vibemathed_significance": 50
+  },
+  {
+    "date": "2026-08-20",
+    "title": "Marton’s inner-bound conjecture",
+    "ai": "GPT-5.6 Sol, Claude Fable 5, Claude Opus 5 + Mian Huang + Yanxiao Liu + Yi Liu",
+    "tier": "major",
+    "summary": "Marton’s inner bound is the best-known achievable rate region for a general broadcast channel. A finite two-receiver channel shows that its one-letter form does not always equal the full capacity region.",
+    "status": "Unreviewed · Preprint",
+    "source": "https://arxiv.org/abs/2608.19869",
+    "vibemathed_significance": 50
+  },
+  {
+    "date": "2026-08-19",
+    "title": "Smooth Carathéodory conjecture",
+    "ai": "Claude, Codex + Levent Alpöge + John-Paul Smith",
+    "tier": "major",
+    "summary": "Carathéodory asked whether every closed convex surface in three-dimensional space has at least two umbilic points. A smooth convex sphere with exactly one umbilic disproves the smooth case; the real-analytic theorem remains valid.",
+    "status": "Lean Checked · Announcement",
+    "source": "https://x.com/__alpoge__/status/2089971359921156203",
+    "vibemathed_significance": 55
+  },
+  {
+    "date": "2026-08-17",
+    "title": "Matrix-multiplication exponent",
+    "ai": "AlphaEvolve + Emilien Dupont + Marvin Eisenberger + Borislav Kozlovskii + Abbas Mehrabian + Francisco J. R. Ruiz + Abigail See + Renfei Zhou + Josh Alman + Virginia Vassilevska Williams + Matej Balog",
+    "tier": "major",
+    "summary": "The matrix-multiplication exponent measures the asymptotic cost of multiplying square matrices. Its upper bound is lowered from 2.371339 to 2.371177, while the central question of whether the exponent equals 2 remains open.",
+    "status": "Unreviewed · Preprint",
+    "source": "https://arxiv.org/abs/2608.16884",
+    "vibemathed_significance": 55
+  },
+  {
+    "date": "2026-08-13",
+    "title": "Banach’s isometric conjecture",
+    "ai": "ChatGPT 5.6 Pro, ChatGPT 5.5 Pro + Xinbao Lu + Kaiwen Yang",
+    "tier": "notable",
+    "summary": "Banach asked whether a real normed space must be a Hilbert space when all subspaces of a fixed intermediate dimension are mutually isometric. Resolving the remaining odd-dimensional cases completes the conjecture over the reals.",
+    "status": "Unreviewed · Preprint",
+    "source": "https://arxiv.org/abs/2608.13536",
+    "vibemathed_significance": 40
+  },
+  {
+    "date": "2026-08-05",
+    "title": "Schiffer’s conjecture",
+    "ai": "GPT-5.6, Claude Opus 4.8, Claude Fable 5 + Gonzalo Cao-Labora + Jaume de Dios Pont",
+    "tier": "major",
+    "summary": "Schiffer’s conjecture asks whether a bounded domain admitting a Neumann eigenfunction constant on its boundary must be a ball. Infinitely many noncircular planar domains provide counterexamples and also resolve the equivalent Pompeiu problem negatively.",
+    "status": "Lean Verified · Preprint",
+    "source": "https://arxiv.org/abs/2608.05114",
+    "vibemathed_significance": 53
+  },
+  {
+    "date": "2026-08-01",
+    "title": "Existence of non-sofic groups",
+    "ai": "Astra (internal preview)",
+    "tier": "major",
+    "summary": "Gromov and Weiss asked whether every group admits approximate finite permutation representations, making every group sofic. An explicit construction answers no by producing a non-sofic group.",
+    "status": "Lean Verified · Announcement",
+    "source": "https://openai.com/index/ten-advances-in-mathematics/",
+    "vibemathed_significance": 60
+  },
+  {
+    "date": "2026-08-01",
+    "title": "Connes’ rigidity conjecture",
+    "ai": "Astra (internal preview)",
+    "tier": "notable",
+    "summary": "Connes’ rigidity conjecture asks whether ICC property-(T) groups are determined by their group von Neumann algebras. A counterexample shows that nonisomorphic groups can have isomorphic associated algebras.",
+    "status": "Lean Verified · Announcement",
+    "source": "https://openai.com/index/ten-advances-in-mathematics/",
+    "vibemathed_significance": 45
+  },
+  {
+    "date": "2026-08-01",
+    "title": "High-dimensional sphere-packing bounds",
+    "ai": "Astra (internal preview)",
+    "tier": "major",
+    "summary": "The sphere-packing problem asks how densely equal spheres can fill high-dimensional space. The asymptotic upper bound is improved beyond the long-standing Kabatiansky–Levenshtein bound to the Cohn–Elkies linear-programming threshold.",
+    "status": "Lean Verified · Announcement",
+    "source": "https://openai.com/index/ten-advances-in-mathematics/",
+    "vibemathed_significance": 50
+  },
+  {
+    "date": "2026-07-27",
+    "title": "KLS conjecture for quadratic forms",
+    "ai": "ChatGPT-5.6 Pro + Brayden Letwin",
+    "tier": "notable",
+    "summary": "The Kannan–Lovász–Simonovits conjecture seeks dimension-free variance bounds for isotropic log-concave distributions. The quadratic-form case is established with constant 2, alongside an improved general bound.",
+    "status": "Unreviewed · Preprint",
+    "source": "https://arxiv.org/abs/2607.24164",
+    "vibemathed_significance": 45
+  },
+  {
+    "date": "2026-07-23",
+    "title": "Petersen coloring conjecture",
+    "ai": "ChatGPT + Bryce Putman",
+    "tier": "notable",
+    "summary": "Jaeger conjectured that every bridgeless cubic graph admits a Petersen coloring. An explicit bridgeless cubic counterexample disproves the conjecture, while its consequences such as Berge–Fulkerson remain open.",
+    "status": "Site Confirmed · Preprint",
+    "source": "https://arxiv.org/abs/2608.10012",
+    "vibemathed_significance": 40
+  },
+  {
+    "date": "2026-07-02",
+    "title": "White’s matroid conjecture",
+    "ai": "ChatGPT-5.5 Pro, Claude Opus 4.8 + Matt Larson",
+    "tier": "notable",
+    "summary": "White conjectured that symmetric exchange binomials generate every matroid toric ideal. A rank-nine binary matroid supplies a counterexample.",
+    "status": "Unreviewed · Preprint",
+    "source": "https://arxiv.org/abs/2607.02208",
+    "vibemathed_significance": 40
+  },
+  {
+    "date": "2026-05-27",
+    "title": "Real sum-product conjecture",
+    "ai": "GPT-5.5 Pro + Thomas F. Bloom + Will Sawin + Carl Schildkraut + Dmitrii Zakharov",
+    "tier": "major",
+    "summary": "The real sum-product conjecture predicted that every finite real set has nearly quadratically many sums or products. Families of algebraic integers with substantially fewer of both provide counterexamples.",
+    "status": "Unreviewed · Preprint",
+    "source": "https://arxiv.org/abs/2605.28781",
+    "vibemathed_significance": 55
   }
 ]
