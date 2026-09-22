@@ -300,6 +300,16 @@
     "vibemathed_significance": 40
   },
   {
+    "date": "2026-09-20",
+    "title": "Kahn’s flow conjecture",
+    "ai": "GPT-6 Astra + Peter Keevash",
+    "tier": "notable",
+    "summary": "Chvátal’s conjecture states that every downset has a largest intersecting subfamily consisting of all sets containing some fixed element. A flow construction proves Kahn’s stronger form of the conjecture and therefore establishes Chvátal’s statement.",
+    "status": "Unreviewed · Preprint",
+    "source": "https://arxiv.org/abs/2609.23595",
+    "vibemathed_significance": 40
+  },
+  {
     "date": "2026-08-28",
     "title": "Erdős problem 1: sum-distinct sets",
     "ai": "GPT-6 Astra (pre-release) + Tom Adamczewski",
